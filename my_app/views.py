@@ -1,3 +1,137 @@
 from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from .models import *
+from .serializers import *
+
+class CategoryListView(generics.ListAPIView):
+    queryset=Category.objects.all()
+    serializer_class=CategorySerializer
+
+
+class CategoryCreateView(generics.CreateAPIView):
+    queryset=Category.objects.all()
+    serializer_class=CategorySerializer
+
+
+
+class CategoryUpdateView(generics.UpdateAPIView):
+    queryset=Category.objects.all()
+    serializer_class=CategorySerializer
+
+
+class CategoryDestroyView(generics.DestroyAPIView):
+    queryset=Category.objects.all()
+    serializer_class=CategorySerializer
+
+
+
+
+
+
+class MovieListView(generics.ListAPIView):
+    queryset=Movie.objects.all()
+    serializer_class=MovieSerializer
+
+
+class MovieCreateView(generics.CreateAPIView):
+    queryset=Movie.objects.all()
+    serializer_class=MovieSerializer
+
+
+
+class MovieUpdateView(generics.UpdateAPIView):
+    queryset=Movie.objects.all()
+    serializer_class=MovieSerializer
+
+
+class MovieDestroyView(generics.DestroyAPIView):
+    queryset=Movie.objects.all()
+    serializer_class=CategorySerializer
+
+
+
+
+
+
+
+
+
+
+
+
+
+class ScreeningListView(generics.ListAPIView):
+    queryset=Screening.objects.all()
+    serializer_class=ScreeningSerializer
+
+
+class ScreeningCreateView(generics.CreateAPIView):
+    queryset=Screening.objects.all()
+    serializer_class=ScreeningSerializer
+
+
+
+class ScreeningUpdateView(generics.UpdateAPIView):
+    queryset=Screening.objects.all()
+    serializer_class=ScreeningSerializer
+
+
+class ScreeningDestroyView(generics.DestroyAPIView):
+    queryset=Screening.objects.all()
+    serializer_class=ScreeningSerializer
+
+
+
+
+
+
+
+
+class ReviewListView(generics.ListAPIView):
+    queryset=Review.objects.all()
+    serializer_class=ReviewSerializer
+
+
+class ReviewCreateView(generics.CreateAPIView):
+    queryset=Review.objects.all()
+    serializer_class=ReviewSerializer
+
+
+
+class ReviewUpdateView(generics.UpdateAPIView):
+    queryset=Review.objects.all()
+    serializer_class=ReviewSerializer
+
+
+class ReviewDestroyView(generics.DestroyAPIView):
+    queryset=Review.objects.all()
+    serializer_class=ReviewSerializer
+
+
+
+
+
+
+class ReservationsListView(generics.ListAPIView):
+    queryset=Reservations.objects.all()
+    serializer_class=ReservationsSerializer
+
+
+class ReservationsCreateView(generics.CreateAPIView):
+    queryset=Reservations.objects.all()
+    serializer_class=ReservationsSerializer
+
+
+
+class ReservationsUpdateView(generics.UpdateAPIView):
+    queryset=Reservations.objects.all()
+    serializer_class=ReservationsSerializer
+
+
+class ReservationsDestroyView(generics.DestroyAPIView):
+    queryset=Reservations.objects.all()
+    serializer_class=ReservationsSerializer
+
+
+
