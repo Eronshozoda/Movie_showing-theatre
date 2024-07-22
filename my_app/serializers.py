@@ -38,5 +38,5 @@ class ReservationsSerializer(serializers.ModelSerializer):
 
 class FeedbackSerializer(serializers.ModelSerializer):
     class Meta:
-        model=Category
+        model=Feedback
         fields="__all__"

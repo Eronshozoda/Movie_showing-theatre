@@ -135,3 +135,30 @@ class ReservationsDestroyView(generics.DestroyAPIView):
 
 
 
+
+
+
+
+
+class FeedbackListView(generics.ListAPIView):
+    queryset=Feedback.objects.all()
+    serializer_class=FeedbackSerializer
+
+
+class FeedbackCreateView(generics.CreateAPIView):
+    queryset=Feedback.objects.all()
+    serializer_class=FeedbackSerializer
+
+
+
+class FeedbackUpdateView(generics.UpdateAPIView):
+    queryset=Feedback.objects.all()
+    serializer_class=FeedbackSerializer
+
+
+class FeedbackDestroyView(generics.DestroyAPIView):
+    queryset=Feedback.objects.all()
+    serializer_class=FeedbackSerializer
+
+
+

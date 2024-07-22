@@ -36,4 +36,12 @@ urlpatterns = [
 
 
 
+
+    path('feedback_list',FeedbackListView.as_view(),name="feedback"),
+    path('create_feedback',FeedbackCreateView.as_view(),name="feedback"),
+    path('update_feedback/<int:pk>',FeedbackUpdateView.as_view(),name="feedback"),
+    path('delete_feedback/<int:pk>',FeedbackDestroyView.as_view(),name="feedback"),
+
+
+
 ]
