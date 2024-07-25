@@ -8,6 +8,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class MovieSerializer(serializers.ModelSerializer):
+    # movie=CategorySerializer(read_only=True)
     class Meta:
         model=Movie
         fields="__all__"
