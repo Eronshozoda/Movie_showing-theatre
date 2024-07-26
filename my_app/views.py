@@ -3,6 +3,8 @@ from rest_framework import generics,filters
 from .models import *
 from .serializers import *
 from django_filters.rest_framework import DjangoFilterBackend
+
+
 class CategoryListView(generics.ListAPIView):
     queryset=Category.objects.all()
     serializer_class=CategorySerializer
@@ -32,8 +34,8 @@ class MovieListView(generics.ListAPIView):
     queryset=Movie.objects.all()    
     serializer_class=MovieSerializer
     filter_backends=[DjangoFilterBackend,filters.SearchFilter]
-    filterset_fields=["title","category","release_date"]
-    search_fields=['title','category']
+    filterset_fields=["title"]
+    search_fields=['title']
     
 
 

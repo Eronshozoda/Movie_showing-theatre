@@ -20,7 +20,7 @@ class Movie(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     duration = models.CharField(max_length=30)
     age_limit = models.IntegerField()
-    release_date = models.DateField()  # Изменено имя поля на release_date
+    release_date = models.DateField()  
     cost = models.IntegerField()
     description = models.TextField()
     director = models.CharField(max_length=100)
@@ -34,7 +34,7 @@ class Screening(models.Model):
     date = models.DateField()
     time = models.TimeField()
     hall = models.CharField(max_length=100)
-    total_seats = models.IntegerField()  # Общее количество мест в зале
+    total_seats = models.IntegerField() 
 
     def __str__(self):
         return f"{self.movie.title} - {self.date} {self.time} - {self.hall}"
@@ -55,9 +55,9 @@ class Review(models.Model):
 class Reservations(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
-    phone_number = models.CharField(max_length=15)  # Изменено на CharField
+    phone_number = models.CharField(max_length=15) 
     age = models.IntegerField()
-    screening = models.ForeignKey(Screening, on_delete=models.CASCADE)  # Изменено на ForeignKey на Screening
+    screening = models.ForeignKey(Screening, on_delete=models.CASCADE)  
     payment = models.CharField(choices=payments, max_length=20)
     seat_number = models.CharField(max_length=10)
 
