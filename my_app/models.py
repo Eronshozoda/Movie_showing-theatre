@@ -25,6 +25,8 @@ class Movie(models.Model):
     description = models.TextField()
     director = models.CharField(max_length=100)
     starring = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='movies/images/', blank=True, null=True)
+    video = models.FileField(upload_to='movies/videos/', blank=True, null=True)
 
     def __str__(self):
         return self.title

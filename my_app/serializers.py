@@ -33,6 +33,7 @@ class ReservationsSerializer(serializers.ModelSerializer):
         model=Reservations
         fields="__all__"
 
+  
 
 
 
